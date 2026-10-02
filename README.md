@@ -1,75 +1,235 @@
-# React + TypeScript + Vite
+# 💰 FinanSmart
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Aplicação web de **gestão financeira pessoal** desenvolvida para facilitar o controle de receitas, despesas, orçamento e metas financeiras por meio de uma interface moderna, intuitiva e responsiva.
 
-Currently, two official plugins are available:
+🔗 **Acesse o projeto online:**  
+https://finansmart-ai-3cbce.web.app
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+---
 
-## React Compiler
+## 📌 Sobre o projeto
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+O **FinanSmart** foi desenvolvido com o objetivo de ajudar usuários a organizarem melhor suas finanças pessoais em um único ambiente.
 
-## Expanding the ESLint configuration
+A aplicação permite acompanhar o saldo, registrar movimentações financeiras, visualizar relatórios, controlar orçamentos e criar metas financeiras.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+O sistema também possui autenticação de usuários e interface adaptada para computadores e dispositivos móveis.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+---
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+## ✨ Funcionalidades
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+- 🔐 Cadastro e login de usuários
+- 👤 Gerenciamento da conta
+- 💰 Configuração de saldo inicial
+- 📊 Dashboard financeiro
+- 💵 Controle de receitas e despesas
+- ➕ Cadastro de novas transações
+- ✏️ Edição de transações
+- 🗑️ Exclusão de transações
+- 🔎 Pesquisa e filtros de movimentações
+- 📋 Controle de orçamentos
+- 🎯 Criação e acompanhamento de metas
+- 📈 Relatórios financeiros
+- 📊 Gráficos de evolução financeira
+- 🏷️ Análise de gastos por categoria
+- 🔔 Notificações financeiras dentro da aplicação
+- 🤖 Assistente financeiro com respostas baseadas nos dados da aplicação
+- ⚙️ Configurações da conta
+- 🔑 Alteração de senha
+- 🚪 Logout seguro
+- 📱 Interface responsiva para desktop e dispositivos móveis
 
+---
+
+## 🛠️ Tecnologias utilizadas
+
+### Front-end
+
+- React
+- TypeScript
+- JavaScript
+- HTML5
+- CSS3
+- Vite
+
+### Back-end e serviços
+
+- Firebase Authentication
+- Firebase Hosting
+
+### Desenvolvimento e versionamento
+
+- Git
+- GitHub
+- npm
+- VS Code
+
+---
+
+## 🔐 Autenticação
+
+O FinanSmart utiliza **Firebase Authentication** para gerenciamento de usuários.
+
+O sistema permite:
+
+- Criar uma nova conta
+- Fazer login
+- Manter a sessão do usuário
+- Alterar nome de exibição
+- Alterar senha mediante autenticação
+- Encerrar a sessão
+
+---
+
+## 📊 Dashboard
+
+O dashboard apresenta uma visão geral da situação financeira do usuário, incluindo:
+
+- Saldo disponível
+- Total de receitas
+- Total de despesas
+- Movimentações recentes
+- Indicadores financeiros
+- Gráficos
+- Notificações baseadas na situação financeira
+
+---
+
+## 📈 Relatórios
+
+A área de relatórios permite acompanhar a evolução financeira e entender melhor como o dinheiro está sendo utilizado.
+
+Entre as informações apresentadas estão:
+
+- Evolução financeira
+- Comparação entre receitas e despesas
+- Gastos por categoria
+- Resumo das movimentações
+
+---
+
+## 🎯 Metas e orçamentos
+
+O usuário pode organizar melhor seu planejamento financeiro utilizando:
+
+**Metas financeiras**  
+Permitem acompanhar objetivos e valores que o usuário deseja alcançar.
+
+**Orçamentos**  
+Auxiliam no controle dos limites de gastos e na organização financeira.
+
+---
+
+## 🤖 Assistente Financeiro
+
+O FinanSmart possui um assistente financeiro integrado que analisa informações disponíveis na aplicação e fornece respostas e orientações com base nos dados financeiros do usuário.
+
+> Atualmente, o assistente funciona com regras internas da aplicação. A integração com modelos de Inteligência Artificial pode ser adicionada futuramente.
+
+---
+
+## 📱 Responsividade
+
+A interface foi desenvolvida para funcionar em diferentes tamanhos de tela.
+
+O FinanSmart possui versões adaptadas para:
+
+- 💻 Desktop
+- 📱 Smartphones
+- 📲 Tablets
+
+---
+
+## 🌐 Deploy
+
+A aplicação está publicada utilizando **Firebase Hosting**.
+
+🔗 **Aplicação online:**  
+https://finansmart-ai-3cbce.web.app
+
+---
+
+## 🚀 Executando o projeto localmente
+
+Clone o repositório:
+
+```bash
+git clone URL-DO-SEU-REPOSITORIO
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+Entre na pasta:
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+cd FinanSmart
 ```
+
+Instale as dependências:
+
+```bash
+npm install
+```
+
+Execute o projeto:
+
+```bash
+npm run dev
+```
+
+Para gerar a versão de produção:
+
+```bash
+npm run build
+```
+
+---
+
+## 📂 Estrutura principal
+
+```text
+FinanSmart/
+│
+├── public/
+│
+├── src/
+│   ├── assets/
+│   ├── components/
+│   │   ├── Assistant.tsx
+│   │   ├── Budgets.tsx
+│   │   ├── Dashboard.tsx
+│   │   ├── Goals.tsx
+│   │   ├── InitialBalance.tsx
+│   │   ├── Login.tsx
+│   │   ├── Register.tsx
+│   │   ├── Reports.tsx
+│   │   ├── Settings.tsx
+│   │   ├── Sidebar.tsx
+│   │   ├── TransactionModal.tsx
+│   │   └── Transactions.tsx
+│   │
+│   ├── App.tsx
+│   ├── App.css
+│   ├── firebase.ts
+│   └── main.tsx
+│
+├── firebase.json
+├── package.json
+├── tsconfig.json
+└── vite.config.ts
+```
+
+---
+
+## 👩‍💻 Desenvolvedora
+
+**Maria Grazielly**
+
+Estudante de **Análise e Desenvolvimento de Sistemas**, com foco em desenvolvimento Front-end e evolução para Full Stack.
+
+### Conhecimentos
+
+`React` • `TypeScript` • `JavaScript` • `HTML` • `CSS` • `Java` • `Python` • `Firebase` • `SQL` • `Git` • `GitHub`
+
+---
+
+⭐ Projeto desenvolvido para estudo, prática de desenvolvimento web e composição de portfólio profissional.
